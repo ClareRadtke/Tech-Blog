@@ -2,11 +2,14 @@
   /* Primary colors 60% */
   --onyx: #393e41;
   --timberwolf: #d3d0cb;
+  --cultured: #f6f5f4;
   /* Secondary color 30% */
   --ming: #587b7f;
   /* Pop/CTA colors 10% */
   --light-sea-green: #06b1a6;
   --maize-crayola: #e3c34f;
+  /* border */
+  --border: #9da5aa;
 }
 
 /* Heading */
@@ -15,15 +18,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--ming);
+  font-family: "Permanent Marker", "Nunito", sans-serif;
 }
 
 .heading {
+  font-weight: 800;
 }
 
 /*  Navbar */
 .navbar {
   display: flex;
   flex-flow: row wrap;
+  background-color: var(--cultured);
+  border: 2.5px solid var(--border);
+  font-family: "Nunito", sans-serif;
 }
 
 .navbar-ul {
@@ -37,10 +46,55 @@ header {
 
 .nav-link {
   text-decoration: none;
+  font-weight: 700;
   list-style: none;
   padding: 5px 10px;
+  color: var(--onyx);
 }
 
+.nav-link:hover,
+.nav-link:active {
+  border-bottom: 5px solid var(--maize-crayola);
+}
+
+.login {
+  color: var(--light-sea-green);
+}
+
+/* Articles */
+main {
+  display: flex;
+  flex-flow: column wrap;
+  background: var(--timberwolf);
+  border: 2.5px solid var(--border);
+  border-top: none;
+  font-family: "Nunito", sans-serif;
+}
+
+.article-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cultured);
+  margin: 16px 16px 0;
+}
+
+.last {
+  margin-bottom: 16px;
+}
+
+.article-heading {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.article-sample {
+  margin: 0 16px 16px;
+  font-weight: 400;
+}
+
+/* Footer */
 .navbar-follow {
   display: flex;
   flex-flow: row wrap;
@@ -61,29 +115,7 @@ header {
 .follow-icon {
   max-width: 40px;
   height: auto;
-  padding: 10px 10px;
-}
-
-/* Articles */
-main {
-  display: flex;
-  flex-flow: column wrap;
-  /* width: 100%; */
-  /* justify-content: center;
-  align-items: center; */
-}
-
-.article-container {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.article-heading {
-}
-
-.article-sample {
-  margin: 16px 16px;
+  padding: 0.5px 0.5px;
+  background-color: var(--timberwolf);
+  border-radius: 50%;
 }
