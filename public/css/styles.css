@@ -77,11 +77,14 @@ main {
   justify-content: center;
   align-items: center;
   background-color: var(--cultured);
-  margin: 16px 16px 0;
+  margin: 1rem 1rem 0;
 }
 
-.last {
-  margin-bottom: 16px;
+.article-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
 .article-heading {
@@ -89,8 +92,24 @@ main {
   font-weight: 800;
 }
 
+.poster-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+h5.poster-username {
+  margin: 0;
+  line-height: 1.5;
+}
+
+h5.date-posted {
+  margin: 0;
+  line-height: 1.5;
+}
+
 .article-sample {
-  margin: 0 16px 16px;
+  margin: 0 1rem 1rem;
   font-weight: 400;
 }
 
@@ -118,4 +137,127 @@ main {
   padding: 0.5px 0.5px;
   background-color: var(--timberwolf);
   border-radius: 50%;
+}
+
+/* Buttons - Sign Up / Sign In / Cancel */
+.button-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#sign-in.button {
+  background: var(--light-sea-green);
+}
+
+#sign-up.button {
+  background: var(--maize-crayola);
+  color: var(--onyx);
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  background: var(--onyx);
+  color: var(--cultured);
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Sign-up / Sign-In */
+.username-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  line-height: 1.5;
+  /* margin: 0.5rem; */
+}
+
+input {
+  line-height: 1.5;
+  margin: 0.5rem;
+}
+
+/* Comment Section for Blog Posts */
+.comment-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+/* Add comment section */
+.add-comment-container {
+  margin: 1rem 0.5rem;
+}
+
+textarea {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  background-color: var(--cultured);
+  color: var(--onyx);
+  height: 4.5rem;
+  width: auto;
+}
+
+#post.button {
+  color: var(--cultured);
+  background-color: var(--light-sea-green);
+}
+
+/* Posted Comments */
+
+.posted-comments-container {
+  background-color: var(--timberwolf);
+  border: 1.5px solid var(--border);
+  margin: 1rem 0;
+}
+.posted-comment {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: var(--cultured);
+  margin: 0.5rem 0.5rem;
+  border: 1.5px solid var(--border);
+}
+
+.poster-username {
+  margin: 0.5rem 0.5rem;
+  line-height: 1.5;
+}
+
+.date-posted {
+  margin: 0.5rem 0.5rem;
+  line-height: 1.5;
+}
+
+.comment {
+  margin: 0 0.5rem 0.5rem;
+  line-height: 1.5;
+  width: 100%;
 }

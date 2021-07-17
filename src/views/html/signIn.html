@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Media Query for Screen</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../public/css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="heading">Tech Blog</h1>
+    </header>
+
+    <nav class="navbar">
+      <ul class="navbar-ul">
+        <li class="nav-link">home</li>
+        <li class="nav-link">dashboard</li>
+        <!-- <li class="nav-link">about</li> -->
+        <li class="nav-link login">login</li>
+      </ul>
+
+      <!-- TODO: In larger screen size have the follow in the nav to the right -->
+      <!-- <ul class="navbar-follow">
+        <li class="follow-text">follow</li>
+        <li class="nav-link">
+          <a href="https://github.com/ClareRadtke" target="_blank">
+            <img src="../../public/images/github.png" class="follow-icon">
+          </a>
+        </li>
+        <li class="nav-link">
+          <a href="https://www.linkedin.com/in/clareradtke/" target="_blank">
+            <img src="../../public/images/linkedin.png" class="follow-icon">
+          </a>
+        </li>
+      </ul> -->
+    </nav>
+
+    <main>
+      <!-- Sign Up -->
+      <div>
+        <div class="username-container">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username">
+        </div>
+      
+        <div class="password-container">
+            <label for="password">Password (8 characters minimum):</label>
+            <input type="password" id="password" name="password"
+                    minlength="8" required>
+        </div>
+
+        <div class="button-container">
+            <button type="button" value="sign-up" id="sign-up" class="button">Sign up</button>
+            <button type="button" value="cancel" id="cancel" class="button">Cancel</button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <ul class="navbar-follow">
+        <li class="follow-text">follow</li>
+        <li class="nav-link">
+          <a href="https://github.com/ClareRadtke" target="_blank">
+            <img src="../../public/images/github.png" class="follow-icon">
+          </a>
+        </li>
+        <li class="nav-link">
+          <a href="https://www.linkedin.com/in/clareradtke/" target="_blank">
+            <img src="../../public/images/linkedin.png" class="follow-icon">
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+  </body>
+</html>  

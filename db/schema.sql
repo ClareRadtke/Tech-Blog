@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS techBlogLog_db;
-CREATE DATABASE techBlogLog_db;
+DROP DATABASE IF EXISTS techBlogLog;
+CREATE DATABASE techBlogLog;
 
-USE techBlogLog_db;
+USE techBlogLog;
