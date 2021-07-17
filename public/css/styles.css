@@ -148,7 +148,7 @@ h5.date-posted {
   justify-content: center;
 }
 
-#sign-in.button {
+#login.button {
   background: var(--light-sea-green);
 }
 
@@ -175,7 +175,7 @@ h5.date-posted {
   -moz-appearance: none;
 }
 
-/* Sign-up / Sign-In */
+/* Sign-up / Login */
 .username-container {
   display: flex;
   flex-flow: row wrap;
