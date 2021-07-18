@@ -60,5 +60,6 @@ router.post("/login", async (req, res) => {
 // TODO: add update settings option for password reset
 
 // Delete user session
+//TODO: add option to delete account
 
 module.exports = router;
