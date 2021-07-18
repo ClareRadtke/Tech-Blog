@@ -168,9 +168,9 @@ h5.date-posted {
   color: var(--cultured);
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -199,6 +199,7 @@ label {
 input {
   line-height: 1.5;
   margin: 0.5rem;
+  color: var(--onyx);
 }
 
 /* Comment Section for Blog Posts */
@@ -223,6 +224,7 @@ textarea {
   color: var(--onyx);
   height: 4.5rem;
   width: auto;
+  line-height: 1.5rem;
 }
 
 #post.button {
@@ -260,4 +262,58 @@ textarea {
   margin: 0 0.5rem 0.5rem;
   line-height: 1.5;
   width: 100%;
+}
+
+/* User dashboard */
+/* options menu */
+.user-options-container {
+  display: flex;
+  flex-flow: row wrap;
+  background: var(--onyx);
+  border: 2.5px solid var(--border);
+  border-top: none;
+  font-family: "Nunito", sans-serif;
+  justify-content: space-around;
+}
+
+#user-opt-header.article-heading {
+  color: var(--maize-crayola);
+  font-weight: 400;
+  text-transform: none;
+  width: 60%;
+  margin-left: 0.5rem;
+}
+
+#new-post.button,
+#update.button {
+  background-color: var(--light-sea-green);
+  align-self: center;
+}
+
+/* new post */
+
+.new-post.article-container {
+  margin: 1rem 0.5rem;
+  align-items: stretch;
+}
+
+input#post-title {
+  margin: 1rem 0.5rem 0;
+  line-height: 2;
+  font-size: 1.25rem;
+  padding: 0 0.5rem;
+}
+
+textarea#new-post {
+  margin: 1rem 0.5rem;
+  background-color: rgb(255, 255, 255);
+  height: 9rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.5rem;
+}
+/* edit/delete a post */
+#delete.button {
+  background-color: var(--maize-crayola);
+  color: var(--onyx);
+  align-self: center;
 }

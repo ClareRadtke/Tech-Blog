@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <head>
+    <title>Tech Blog</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="heading">Tech Blog</h1>
+    </header>
+
+    <nav class="navbar">
+      <ul class="navbar-ul">
+        <li class="nav-link">home</li>
+        <li class="nav-link">dashboard</li>
+        <!-- <li class="nav-link">about</li> -->
+        <li class="nav-link login">login</li>
+      </ul>
+
+    </nav>
+
+
+    <main>
+
+      <div class="article-container new-post">
+        <label for="post-title"></label>
+        <input type="text" id="post-title" name="post-title" required minlength="1" placeholder="Title">
+          
+        <label for="new-post"></label>
+        <textarea id="new-post" name="new-post" rows="5" cols="20" spellcheck="true" minlength="1" placeholder="Write your post here"></textarea>
+      </div>
+
+    </main>
+    <aside>
+      <div class="user-options-container">
+        <a href="" class="button" id="new-post">Save & Post</a>
+      </div>
+    </aside>
+  
+
+
+    <footer>
+        <ul class="navbar-follow">
+        <li class="follow-text">follow</li>
+        <li class="nav-link">
+            <a href="https://github.com/ClareRadtke" target="_blank">
+            <img src="../../public/images/github.png" class="follow-icon">
+            </a>
+        </li>
+        <li class="nav-link">
+            <a href="https://www.linkedin.com/in/clareradtke/" target="_blank">
+            <img src="../../public/images/linkedin.png" class="follow-icon">
+            </a>
+        </li>
+        </ul>
+    </footer>
+
+    </body>
+</html>

@@ -17,8 +17,19 @@ router.get("/article", (req, res) => {
 });
 
 router.get("/dashboard", (req, res) => {
-  res.send("WIP");
-  // res.render("dashboard");
+  res.render("dashboard");
+});
+
+router.get("/dashboard/new-post", (req, res) => {
+  res.render("newPost");
+});
+
+router.get("/dashboard/:postID/edit", (req, res) => {
+  res.render("editPost");
+});
+
+router.get("/article", (req, res) => {
+  res.render("article");
 });
 
 module.exports = router;
