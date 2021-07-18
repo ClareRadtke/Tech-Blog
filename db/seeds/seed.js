@@ -1,5 +1,6 @@
 const { User, Post, Comment } = require("../../src/models");
 const { sequelize } = require("../../src/config/connection");
+const bcrypt = require("bcrypt");
 
 sequelize.sync({ force: true }).then(async () => {
   await User.create({
