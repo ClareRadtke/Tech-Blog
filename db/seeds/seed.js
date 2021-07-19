@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 sequelize.sync({ force: true }).then(async () => {
   await User.create({
     username: "Kenzie",
-    password: "Cat123",
+    password: "Cat12333",
   });
   await Post.create({
     user_id: 1,

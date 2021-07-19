@@ -1,39 +1,66 @@
-    <main>
+<main>
+  {{#if loggedIn}}
+    <div class="article-container">
 
-      <div class="article-container">
-        
-        <div class="article-header">
-          <h3 class="article-heading">Article 1</h3>
-          <div class="poster-info">
-            <h5 class="poster-username">username of poster</h5>
-            <h5 class="date-posted">date created</h5>
-          </div>
+      <div class="article-header">
+        <h3 class="article-heading">Article 1</h3>
+        <div class="poster-info">
+          <h5 class="poster-username">username of poster</h5>
+          <h5 class="date-posted">date created</h5>
         </div>
-
-        <p class="article-sample">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet molestie sodales. Curabitur blandit, lacus quis suscipit hendrerit, nunc elit convallis augue, ac blandit nisi velit sed tellus. Quisque in orci interdum, scelerisque leo a, fringilla libero. Maecenas iaculis elementum mi volutpat fringilla. Cras sed justo interdum, tristique ex quis, efficitur ligula. Pellentesque rhoncus velit sit amet eros efficitur maximus. Mauris pellentesque, est id efficitur scelerisque, purus orci luctus purus, sed faucibus turpis erat eget massa. Pellentesque feugiat suscipit mauris, vitae rutrum tellus fermentum quis. Donec lobortis ultrices arcu nec tempus.</p>
-      </div>
-     
-     <div class="comment-container">
-
-        <div class="add-comment-container">
-          <label for="comment">Comment:</label>
-          <textarea id="comment" name="comment" rows="5" cols="33" placeholder="Let the author know what you think!"></textarea>
-          <button type="button" class="button">Post</button>
-        </div>
-
-        <div class="posted-comments-container">
-          <div class="posted-comment">
-            <p class="poster-username">username of poster</p>
-            <p class="date-posted">date created</p>
-            <p class="comment">example of a comment posted about this blog post...</p>
-          </div>
-          <div class="posted-comment">
-            <p class="poster-username">username of poster</p>
-            <p class="date-posted">date created</p>
-            <p class="comment">example of a comment posted about this blog post...</p>
-          </div>
-        </div>
-
       </div>
 
-    </main>
+      <p class="article-sample">Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Nullam aliquet molestie sodales. Curabitur blandit,
+        lacus quis suscipit hendrerit, nunc elit convallis augue, ac blandit
+        nisi velit sed tellus. Quisque in orci interdum, scelerisque leo a,
+        fringilla libero. Maecenas iaculis elementum mi volutpat fringilla. Cras
+        sed justo interdum, tristique ex quis, efficitur ligula. Pellentesque
+        rhoncus velit sit amet eros efficitur maximus. Mauris pellentesque, est
+        id efficitur scelerisque, purus orci luctus purus, sed faucibus turpis
+        erat eget massa. Pellentesque feugiat suscipit mauris, vitae rutrum
+        tellus fermentum quis. Donec lobortis ultrices arcu nec tempus.</p>
+    </div>
+
+    <div class="comment-container">
+
+      <div class="add-comment-container">
+        <label for="comment">Comment:</label>
+        <textarea
+          id="comment"
+          name="comment"
+          rows="5"
+          cols="33"
+          placeholder="Let the author know what you think!"
+        ></textarea>
+        <button type="button" class="button">Post</button>
+      </div>
+
+      <div class="posted-comments-container">
+        <div class="posted-comment">
+          <p class="poster-username">username of poster</p>
+          <p class="date-posted">date created</p>
+          <p class="comment">example of a comment posted about this blog post...</p>
+        </div>
+        <div class="posted-comment">
+          <p class="poster-username">username of poster</p>
+          <p class="date-posted">date created</p>
+          <p class="comment">example of a comment posted about this blog post...</p>
+        </div>
+      </div>
+
+    </div>
+  {{else}}
+    <div class="article-container">
+
+      <div class="article-header">
+        <h3 class="article-heading">Article 1</h3>
+      </div>
+
+      <p class="article-sample">Please
+        <a class="nav-link login" href="/login">login</a>
+        to view the full article and leave comments</p>
+    </div>
+  {{/if}}
+
+</main>

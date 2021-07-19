@@ -32,4 +32,11 @@ router.get("/article", (req, res) => {
   res.render("article");
 });
 
+router.get("/logout", (req, res) => {
+  res.setHeader("Location", "/login");
+  req.session.destroy(() => {
+    res.status(307).end();
+  });
+});
+
 module.exports = router;

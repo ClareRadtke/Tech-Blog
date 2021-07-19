@@ -1,6 +1,7 @@
 <main>
-  <!-- Sign Up -->
-  <div>
+
+  <form class="login-form">
+
     <div class="username-container">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" />
@@ -19,19 +20,17 @@
 
     <div class="button-container">
       <button
-        type="button"
+        type="submit"
         value="login"
         id="login"
         class="button"
       >Login</button>
-      <button
-        type="button"
-        value="cancel"
-        id="cancel"
-        class="button"
-      >Cancel</button>
+      <a href="/" id="cancel" class="button">Cancel</a>
       <a href="/sign-up" id="sign-up" class="button">No Account? Sign Up!</a>
     </div>
 
-  </div>
+  </form>
+
+  <script src="/js/login.js"></script>
+
 </main>

@@ -1,22 +1,28 @@
 <main>
-      <!-- Sign Up -->
-      <div>
-        <div class="username-container">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username">
-        </div>
-      
-        <div class="password-container">
-            <label for="password">Password (8 characters minimum):</label>
-            <input type="password" id="password" name="password"
-                    minlength="8" required>
-        </div>
+  <!-- Sign Up -->
+  <form class="signup-form">
 
-        <div class="button-container">
-            <button type="button" value="sign-up" id="sign-up" class="button">Sign up</button>
-            <button type="button" value="cancel" id="cancel" class="button">Cancel</button>
-        </div>
+    <div class="username-container">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" />
+    </div>
 
-      </div>
+    <div class="password-container">
+      <label for="password">Password (8 characters minimum):</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        minlength="8"
+        required
+      />
+    </div>
 
-    </main>
+    <div class="button-container">
+      <button type="submit" value="sign-up" id="sign-up" class="button">Sign up</button>
+      <a href="/" id="cancel" class="button">Cancel</a>
+    </div>
+
+  </form>
+  <script src="/js/signup.js"></script>
+</main>
