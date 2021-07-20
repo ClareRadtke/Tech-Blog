@@ -265,6 +265,7 @@ textarea {
 }
 
 /* User dashboard */
+
 /* options menu */
 .user-options-container {
   display: flex;
@@ -284,7 +285,7 @@ textarea {
   margin-left: 0.5rem;
 }
 
-#new-post.button,
+#create-post.button,
 #update.button {
   background-color: var(--light-sea-green);
   align-self: center;

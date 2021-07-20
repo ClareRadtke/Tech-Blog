@@ -1,32 +1,42 @@
 <main>
+  <form class="create-post-form">
+    <div class="article-container new-post">
+      <label for="post-title"></label>
+      <input
+        type="text"
+        id="post-title"
+        name="post-title"
+        required
+        minlength="1"
+        placeholder="Title"
+      />
 
-  <div class="article-container new-post">
-    <label for="post-title"></label>
-    <input
-      type="text"
-      id="post-title"
-      name="post-title"
-      required
-      minlength="1"
-      placeholder="Title"
-    />
-
-    <label for="new-post"></label>
-    <textarea
-      id="new-post"
-      name="new-post"
-      rows="5"
-      cols="20"
-      spellcheck="true"
-      minlength="1"
-      placeholder="Write your post here"
-    ></textarea>
-  </div>
+      <label for="new-post"></label>
+      <textarea
+        id="new-post"
+        name="new-post"
+        rows="5"
+        cols="20"
+        spellcheck="true"
+        minlength="1"
+        placeholder="Write your post here"
+      ></textarea>
+    </div>
+  </form>
 
 </main>
 
 <aside>
-  <div class="user-options-container">
-    <a href="" class="button" id="new-post">Save & Post</a>
+  <div class="create-post-submit">
+    <div class="user-options-container">
+      <button
+        type="submit"
+        value="save-&-post"
+        class="button"
+        id="create-post"
+      >Save & Post</button>
+    </div>
   </div>
 </aside>
+
+<script src="/js/postManipulation.js"></script>

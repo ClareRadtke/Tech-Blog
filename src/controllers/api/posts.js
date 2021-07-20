@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
   await Post.create({
     title,
     content,
-    user_id: 1,
+    user_id: req.session.user_id,
   });
   res.end();
 });
