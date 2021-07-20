@@ -2,8 +2,24 @@ const router = require("express").Router();
 const { withAuth } = require("../utils/auth");
 const { Post, User, Comment } = require("../models");
 
-router.get("/", (req, res) => {
-  res.render("main");
+router.get("/", async (req, res) => {
+  try {
+    const postData = await Post.findAll({
+      where: { deleted: false },
+      raw: true,
+      order: [["createdAt", "DESC"]],
+      attributes: { exclude: ["password"] }, // TODO check password is not being returned in the User object
+      include: [{ model: User, Comment }],
+    });
+    console.log(postData);
+
+    res.render("main", {
+      postData,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.get("/login", (req, res) => {
@@ -14,8 +30,27 @@ router.get("/sign-up", (req, res) => {
   res.render("signUp");
 });
 
-router.get("/article", (req, res) => {
-  res.render("article");
+router.get("/article/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        { model: User, attributes: { exclude: ["password"] } },
+        {
+          model: Comment,
+          include: [{ model: User, attributes: { exclude: ["password"] } }],
+        },
+      ],
+    });
+
+    const post = postData.get({ plain: true });
+
+    console.log(post, req.session);
+    res.render("article", {
+      post,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get("/dashboard", withAuth, async (req, res) => {
@@ -36,15 +71,17 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
-router.get("/dashboard/new-post", (req, res) => {
+router.get("/dashboard/new-post", withAuth, (req, res) => {
   res.render("newPost");
 });
 
-router.get("/posts/:id/edit", async (req, res) => {
+router.get("/posts/:id/edit", withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
-      attributes: { exclude: ["password"] }, // TODO check password is not being returned in the User object
-      include: [{ model: User, Comment }],
+      include: [
+        { model: User, attributes: { exclude: ["password"] } },
+        { model: Comment },
+      ],
     });
 
     const post = postData.get({ plain: true });
@@ -56,15 +93,9 @@ router.get("/posts/:id/edit", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
-  // res.render("editPost");
 });
 
-router.get("/article", (req, res) => {
-  res.render("article");
-});
-
-router.get("/logout", (req, res) => {
+router.get("/logout", withAuth, (req, res) => {
   res.setHeader("Location", "/login");
   req.session.destroy(() => {
     res.status(307).end();

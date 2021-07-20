@@ -1,7 +1,22 @@
 <main>
   <!-- TODO: add link to the article page when an article div is clicked -->
   {{! TODO: add fields for author's username and date posted to show when user loggenIn}}
-  <div class="article-container">
+  {{#postData}}
+
+    <a href="/article/{{id}}">
+      <div class="article-container last">
+        <h3 class="article-heading">{{title}}</h3>
+        <div class="poster-info">
+          <h5 class="poster-username">{{"User.username"}}</h5>
+          <h5 class="date-posted">{{format_date createdAt}}</h5>
+        </div>
+        <p class="article-sample">{{content}}</p>
+      </div>
+    </a>
+
+  {{/postData}}
+
+  {{! <div class="article-container">
     <h3 class="article-heading">Article 1</h3>
     <p class="article-sample">Lorem ipsum dolor sit amet, consectetur adipiscing
       elit. Nullam aliquet molestie sodales. Curabitur blandit, lacus quis
@@ -25,26 +40,6 @@
       risus, vulputate imperdiet scelerisque ac, luctus nec purus. Fusce non
       eros quis sapien commodo vulputate non nec velit. Sed tristique ac elit et
       porta. Nunc in finibus augue.</p>
-  </div>
-
-  <a href="/article">
-    <div class="article-container last">
-      <h3 class="article-heading">Article 3</h3>
-      <div class="poster-info">
-        <h5 class="poster-username">username of poster</h5>
-        <h5 class="date-posted">date created</h5>
-      </div>
-      <p class="article-sample">In blandit in erat finibus tristique. Sed nec
-        sapien quis elit malesuada auctor. Aliquam magna tellus, eleifend non
-        molestie at, imperdiet a velit. Pellentesque elementum lorem et augue
-        aliquet, quis volutpat tellus rhoncus. Duis viverra, ex rutrum laoreet
-        rutrum, justo risus feugiat tortor, quis dignissim neque nulla ac
-        tortor. In tempor ac mauris in ullamcorper. Duis ac turpis venenatis
-        felis feugiat sagittis. Etiam ut nisi neque. Vestibulum velit augue,
-        egestas id quam ac, faucibus molestie metus. In fringilla arcu a rhoncus
-        ullamcorper. Quisque eros risus, ultricies eu semper at, porttitor quis
-        turpis. Morbi vitae sagittis eros. Lorem ipsum dolor sit amet</p>
-    </div>
-  </a>
+  </div> }}
 
 </main>

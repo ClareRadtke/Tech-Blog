@@ -49,8 +49,8 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## Requirements
 
-- [] Application folder structure must follow the Model-View-Controller paradigm
-- [] Use the following packages:
+- [x] Application folder structure must follow the Model-View-Controller paradigm
+- [x] Use the following packages:
   - express-handlebars, to implement Handlebars.js for the Views
   - MySQL2, to connect to a MySQL database
   - Sequelize, to connect to a MySQL database
