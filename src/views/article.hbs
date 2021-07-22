@@ -1,51 +1,12 @@
 <main>
   {{#post}}
 
-    <div class="article-container">
+    {{> post reqAuth=true loggedIn=../loggedIn }}
 
-      <div class="article-header">
-        <h3 class="article-heading">{{title}}</h3>
-        <div class="poster-info">
-          <h5 class="poster-username">{{User.username}}</h5>
-          <h5 class="date-posted">{{format_date createdAt}}</h5>
-        </div>
-      </div>
-      {{#if ../loggedIn}}
-        <p class="article-sample">{{content}}</p>
-      {{else}}
-        <p class="article-sample">Please
-          <a class="nav-link login" href="/login">login</a>to view the full
-          article and leave comments</p>
-      {{/if}}
-
-    </div>
-
-    <div class="comment-container">
-      {{#if ../loggedIn}}
-        <div class="add-comment-container">
-          <label for="comment">Comment:</label>
-          <textarea
-            id="comment"
-            name="comment"
-            rows="5"
-            cols="33"
-            placeholder="Let the author know what you think!"
-          ></textarea>
-          <button type="button" class="button">Post</button>
-        </div>
-      {{/if}}
-
-      <div class="posted-comments-container">
-        {{#each Comments}}
-          <div class="posted-comment">
-            <p class="poster-username">{{User.username}}</p>
-            <p class="date-posted">{{format_date createdAt}}</p>
-            <p class="comment">{{content}}</p>
-          </div>
-        {{/each}}
-
-      </div>
-    </div>
-
+    {{> comments loggedIn=../loggedIn}}
+  
   {{/post}}
+
+  <script src="/js/commentManipulation.js"></script>
 </main>
+

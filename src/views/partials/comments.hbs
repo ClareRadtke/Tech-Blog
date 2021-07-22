@@ -1,0 +1,36 @@
+<div class="comment-container">
+
+  <div class="posted-comments-container">
+    <p class="comment-header">Comments:</p>
+    {{#each Comments}}
+      <div class="posted-comment">
+        <p class="poster-username">{{User.username}}</p>
+        <p class="date-posted">{{format_date createdAt}}</p>
+        <p class="comment">{{content}}</p>
+      </div>
+    {{/each}}
+  </div>
+
+  {{#if loggedIn}}
+    <div class="add-comment-container">
+      <input type="hidden" id="post-id" value="{{this.id}}" />
+      <label for="comment" class="comment-header">Comment:</label>
+      <textarea
+        id="comment"
+        name="comment"
+        rows="5"
+        cols="20"
+        placeholder="Let the author know what you think!"
+        spellcheck="true"
+        minlength="1"
+      ></textarea>
+      <button
+        type="submit"
+        class="button"
+        id="comment-btn"
+        value="comment-btn"
+      >Post</button>
+    </div>
+  {{/if}}
+
+</div>

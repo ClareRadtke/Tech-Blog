@@ -1,38 +1,41 @@
 <main>
-  {{#post}}
-
-    <div class="article-container new-post">
-      <input type="hidden" id="post-id" value="{{this.id}}" />
-      <label for="post-title"></label>
-      <input
-        type="text"
-        id="post-title"
-        name="post-title"
-        required
-        minlength="1"
-        value="{{this.title}}"
-      />
-
-      <label for="new-post"></label>
-      <textarea
-        id="new-post"
-        name="new-post"
-        rows="5"
-        cols="20"
-        spellcheck="true"
-        minlength="1"
-      >{{this.content}}</textarea>
-    </div>
-
-  {{/post}}
-
-</main>
-<aside>
+  <aside>
   <div class="user-options-container">
     <button type="submit" value="update" class="button" id="update">Update &
       Post</button>
     <a href="" class="button" id="delete">Delete</a>
   </div>
 </aside>
+  {{#post}}
+
+    <div class="article-container new-post">
+      <input type="hidden" id="post-id" value="{{this.id}}" />
+      <label for="title"></label>
+      <input
+        type="text"
+        id="edit-title"
+        name="edit-title"
+        required
+        minlength="1"
+        value="{{this.title}}"
+      />
+
+      <label for="edit-post"></label>
+      <textarea
+        id="edit-post"
+        name="edit-post"
+        required
+        rows="20"
+        cols="20"
+        spellcheck="true"
+        minlength="1"
+      >{{this.content}}</textarea>
+    </div>
+    {{> comments loggedIn=../loggedIn}}
+
+  {{/post}}
+
+</main>
+
 
 <script src="/js/postManipulation.js"></script>

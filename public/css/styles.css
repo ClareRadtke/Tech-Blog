@@ -44,12 +44,14 @@ header {
   align-items: center;
 }
 
-.nav-link {
+.nav-link,
+.nav-link a {
   text-decoration: none;
   font-weight: 700;
   list-style: none;
   padding: 5px 10px;
   color: var(--onyx);
+  border-bottom: 5px solid transparent;
 }
 
 .nav-link:hover,
@@ -57,7 +59,7 @@ header {
   border-bottom: 5px solid var(--maize-crayola);
 }
 
-.login {
+.login.nav-link {
   color: var(--light-sea-green);
 }
 
@@ -66,18 +68,21 @@ main {
   display: flex;
   flex-flow: column wrap;
   background: var(--timberwolf);
+  padding: 0.5rem 0;
   border: 2.5px solid var(--border);
   border-top: none;
   font-family: "Nunito", sans-serif;
+  box-shadow: 0 20px 0 var(--onyx);
+  margin-bottom: 2rem;
 }
 
 .article-container {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   background-color: var(--cultured);
-  margin: 1rem 1rem 0;
+  margin: 0.5rem 0.5rem;
 }
 
 .article-header {
@@ -88,14 +93,18 @@ main {
 }
 
 .article-heading {
+  align-self: center;
+  width: 60%;
   text-transform: uppercase;
   font-weight: 800;
+  padding: 0 0.5rem;
 }
 
 .poster-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding: 0 0.5rem;
 }
 
 h5.poster-username {
@@ -111,6 +120,12 @@ h5.date-posted {
 .article-sample {
   margin: 0 1rem 1rem;
   font-weight: 400;
+}
+
+a:visited,
+a {
+  color: var(--onyx);
+  text-decoration: none;
 }
 
 /* Footer */
@@ -155,6 +170,9 @@ h5.date-posted {
 #sign-up.button {
   background: var(--maize-crayola);
   color: var(--onyx);
+}
+.cancel.button {
+  color: var(--cultured);
 }
 
 .button {
@@ -206,7 +224,7 @@ input {
 .comment-container {
   display: flex;
   flex-flow: row wrap;
-  margin: 1rem;
+  margin: 0 0.5rem 1rem;
   align-items: center;
   justify-content: center;
   line-height: 1.5;
@@ -214,19 +232,22 @@ input {
 
 /* Add comment section */
 .add-comment-container {
-  margin: 1rem 0.5rem;
+  width: 100%;
 }
-
 textarea {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   background-color: var(--cultured);
   color: var(--onyx);
   height: 4.5rem;
-  width: auto;
+  width: 99%;
   line-height: 1.5rem;
+  border: none;
+  margin: 0.5rem 0;
 }
-
+#comment-btn.button {
+  margin: 0;
+}
 #post.button {
   color: var(--cultured);
   background-color: var(--light-sea-green);
@@ -236,16 +257,23 @@ textarea {
 
 .posted-comments-container {
   background-color: var(--timberwolf);
-  border: 1.5px solid var(--border);
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  width: 100%;
 }
+
+.comment-header {
+  color: var(--onyx);
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
 .posted-comment {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   background-color: var(--cultured);
-  margin: 0.5rem 0.5rem;
-  border: 1.5px solid var(--border);
+  margin: 0.5rem 0;
 }
 
 .poster-username {
@@ -269,7 +297,6 @@ textarea {
 /* options menu */
 .user-options-container {
   display: flex;
-  flex-flow: row wrap;
   background: var(--onyx);
   border: 2.5px solid var(--border);
   border-top: none;
@@ -278,14 +305,22 @@ textarea {
 }
 
 #user-opt-header.article-heading {
-  color: var(--maize-crayola);
+  color: var(--cultured);
   font-weight: 400;
+  font-size: 1.25rem;
   text-transform: none;
-  width: 60%;
   margin-left: 0.5rem;
+  flex-grow: 2;
+}
+#create-post.button {
+  flex-shrink: 2;
+  white-space: nowrap;
 }
 
-#create-post.button,
+#create-post.button {
+  background-color: var(--maize-crayola);
+  align-self: center;
+}
 #update.button {
   background-color: var(--light-sea-green);
   align-self: center;
@@ -298,17 +333,23 @@ textarea {
   align-items: stretch;
 }
 
-input#post-title {
+input#post-title,
+input#edit-title {
   margin: 1rem 0.5rem 0;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
   line-height: 2;
   font-size: 1.25rem;
   padding: 0 0.5rem;
+  border: none;
 }
 
-textarea#new-post {
+textarea#new-post,
+textarea#edit-post {
   margin: 1rem 0.5rem;
-  background-color: rgb(255, 255, 255);
-  height: 9rem;
+  background: rgb(255, 255, 255);
+  height: 15rem;
+  width: 80%;
   font-size: 1.25rem;
   padding: 0.5rem 0.5rem;
 }

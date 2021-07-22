@@ -1,12 +1,12 @@
 <nav class="navbar">
   <ul class="navbar-ul">
-    <li class="nav-link"><a href="/">home</a></li>
-    <li class="nav-link"><a href="/dashboard">dashboard</a></li>
+    <a href="/" class="nav-link">home</a>
+    <a href="/dashboard" class="nav-link">dashboard</a>
     <!-- <li class="nav-link">about</li> -->
     {{#if loggedIn}}
-      <a href="/logout" id="logout" class="nav-link login">logout</a>
+      <a href="/logout" class="nav-link login" id="logout">logout</a>
     {{else}}
-      <li class="nav-link login"><a href="/login">login</a></li>
+      <a href="/login" class="nav-link login">login</a>
     {{/if}}
 
   </ul>

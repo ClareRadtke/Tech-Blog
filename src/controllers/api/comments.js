@@ -1,15 +1,14 @@
-const { Comment, Post } = require("../../models");
+const { Comment } = require("../../models");
 const router = require("express").Router({ mergeParams: true });
 
 router.post("/", async (req, res) => {
-  // console.log("req.param:", req.params, "req.body:", req.body);
   const { content } = req.body;
-  const { postId } = req.params;
   await Comment.create({
     content,
-    user_id: 1,
-    post_id: postId,
+    user_id: req.session.user_id,
+    post_id: req.params.postId,
   });
+
   res.end();
 });
 

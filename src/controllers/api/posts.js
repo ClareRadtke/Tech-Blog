@@ -5,7 +5,6 @@ const commentRoutes = require("./comments");
 router.use("/:postId/comments", commentRoutes);
 
 router.post("/", async (req, res) => {
-  // console.log("req.body:", req.body);
   const { title, content } = req.body;
   await Post.create({
     title,

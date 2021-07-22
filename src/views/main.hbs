@@ -1,45 +1,9 @@
 <main>
-  <!-- TODO: add link to the article page when an article div is clicked -->
-  {{! TODO: add fields for author's username and date posted to show when user loggenIn}}
   {{#postData}}
 
-    <a href="/article/{{id}}">
-      <div class="article-container last">
-        <h3 class="article-heading">{{title}}</h3>
-        <div class="poster-info">
-          <h5 class="poster-username">{{"User.username"}}</h5>
-          <h5 class="date-posted">{{format_date createdAt}}</h5>
-        </div>
-        <p class="article-sample">{{content}}</p>
-      </div>
+    <a href="/posts/{{id}}">
+      {{> post}}
     </a>
-
   {{/postData}}
-
-  {{! <div class="article-container">
-    <h3 class="article-heading">Article 1</h3>
-    <p class="article-sample">Lorem ipsum dolor sit amet, consectetur adipiscing
-      elit. Nullam aliquet molestie sodales. Curabitur blandit, lacus quis
-      suscipit hendrerit, nunc elit convallis augue, ac blandit nisi velit sed
-      tellus. Quisque in orci interdum, scelerisque leo a, fringilla libero.
-      Maecenas iaculis elementum mi volutpat fringilla. Cras sed justo interdum,
-      tristique ex quis, efficitur ligula. Pellentesque rhoncus velit sit amet
-      eros efficitur maximus. Mauris pellentesque, est id efficitur scelerisque,
-      purus orci luctus purus, sed faucibus turpis erat eget massa. Pellentesque
-      feugiat suscipit mauris, vitae rutrum tellus fermentum quis. Donec
-      lobortis ultrices arcu nec tempus.</p>
-  </div>
-
-  <div class="article-container">
-    <h3 class="article-heading">Article 2</h3>
-    <p class="article-sample">Nunc imperdiet lacinia lorem id rutrum. Vivamus
-      vehicula, neque et facilisis malesuada, orci neque hendrerit dolor, eu
-      luctus nibh lorem ut enim. Nulla quis tempus massa, id condimentum tortor.
-      Sed facilisis sapien in erat semper, sit amet tempus enim gravida.
-      Vestibulum nec aliquam lectus, vitae dignissim augue. Curabitur lectus
-      risus, vulputate imperdiet scelerisque ac, luctus nec purus. Fusce non
-      eros quis sapien commodo vulputate non nec velit. Sed tristique ac elit et
-      porta. Nunc in finibus augue.</p>
-  </div> }}
-
+  {{! <script src="/js/main.js"></script> }}
 </main>

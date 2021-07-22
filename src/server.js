@@ -37,6 +37,7 @@ app.use(express.static(path.join(__dirname, "../public/")));
 app.use((req, res, next) => {
   res.locals.loggedIn = req.session.logged_in;
   res.locals.userId = req.session.userId;
+  res.locals.url = req.url;
   next();
 });
 app.use(routes);

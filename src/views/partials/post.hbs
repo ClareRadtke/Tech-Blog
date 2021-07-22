@@ -1,0 +1,23 @@
+<div class="article-container">
+  <div class="article-header">
+    <h3 class="article-heading">{{title}}</h3>
+    <div class="poster-info">
+      <h5 class="poster-username">{{User.username}}</h5>
+      <h5 class="date-posted">{{format_date createdAt}}</h5>
+    </div>
+  </div>
+
+  {{#if reqAuth}}
+
+    {{#if loggedIn}}
+      <p class="article-sample">{{content}}</p>
+    {{else}}
+      <p class="article-sample">Please
+        <a class="nav-link login" href="/login">login</a>to view the full
+        article and leave comments</p>
+    {{/if}}
+
+  {{else}}
+    <p class="article-sample">{{content}}</p>
+  {{/if}}
+</div>

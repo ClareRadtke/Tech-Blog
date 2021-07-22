@@ -1,29 +1,19 @@
-{{!  }}
-{{#user}}
-
-  <aside>
+<aside>
+  {{#user}}
     <div class="user-options-container">
       <h3 class="article-heading" id="user-opt-header">Welcome
         {{this.username}}</h3>
       <a href="/dashboard/new-post" class="button" id="create-post">New Post</a>
     </div>
-  </aside>
+  {{/user}}
+</aside>
 
-  <main>
-
+<main>
+  {{#user}}
     {{#each Posts}}
       <a href="posts/{{id}}/edit">
-        <div class="article-container last">
-          <h3 class="article-heading">{{title}}</h3>
-          <div class="poster-info">
-            <h5 class="date-posted">{{format_date createdAt}}</h5>
-          </div>
-          <p class="article-sample">{{content}}</p>
-        </div>
+          {{> post }}
       </a>
     {{/each}}
-
-  </main>
-
-{{/user}}
-{{!  }}
+  {{/user}}
+</main>
