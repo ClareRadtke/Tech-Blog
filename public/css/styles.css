@@ -49,7 +49,7 @@ header {
   text-decoration: none;
   font-weight: 700;
   list-style: none;
-  padding: 5px 10px;
+  padding: 5px 10px 0;
   color: var(--onyx);
   border-bottom: 5px solid transparent;
 }
@@ -136,6 +136,7 @@ a {
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .follow-text {
@@ -154,7 +155,7 @@ a {
   border-radius: 50%;
 }
 
-/* Buttons - Sign Up / Sign In / Cancel */
+/* Buttons - Sign Up / login / Cancel */
 .button-container {
   display: flex;
   flex-flow: row wrap;
@@ -211,13 +212,16 @@ a {
 }
 label {
   line-height: 1.5;
-  /* margin: 0.5rem; */
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
 }
 
 input {
-  line-height: 1.5;
+  line-height: 1.75;
   margin: 0.5rem;
   color: var(--onyx);
+  border: none;
+  background-color: var(--cultured);
 }
 
 /* Comment Section for Blog Posts */
