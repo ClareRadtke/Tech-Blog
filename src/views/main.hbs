@@ -1,9 +1,12 @@
 <main>
-  {{#postData}}
+  <div class="main-container">
+    {{#postData}}
 
-    <a href="/posts/{{id}}">
-      {{> post}}
-    </a>
-  {{/postData}}
-  {{! <script src="/js/main.js"></script> }}
+      <a href="/posts/{{id}}">
+        {{> post}}
+      </a>
+    {{/postData}}
+  </div>
+  
+  {{!-- <script src="/js/main.js"></script> --}}
 </main>

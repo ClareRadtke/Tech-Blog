@@ -8,12 +8,15 @@
   {{/user}}
 </aside>
 
-<main>
-  {{#user}}
-    {{#each Posts}}
-      <a href="posts/{{id}}/edit">
-          {{> post }}
-      </a>
-    {{/each}}
-  {{/user}}
+<main style="height:79%;">
+  <div class="main-container">
+    {{#user}}
+      {{#each Posts}}
+        <a href="posts/{{id}}/edit">
+            {{> post }}
+        </a>
+      {{/each}}
+    {{/user}}
+  </div>
+  
 </main>

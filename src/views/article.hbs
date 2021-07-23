@@ -1,11 +1,14 @@
 <main>
-  {{#post}}
+  <div class="main-container">
+    {{#post}}
 
-    {{> post reqAuth=true loggedIn=../loggedIn }}
+      {{> post reqAuth=true loggedIn=../loggedIn }}
 
-    {{> comments loggedIn=../loggedIn}}
-  
-  {{/post}}
+      {{> comments loggedIn=../loggedIn}}
+    
+    {{/post}}
+  </div>
+
 
   <script src="/js/commentManipulation.js"></script>
 </main>

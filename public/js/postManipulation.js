@@ -24,8 +24,8 @@ const createPostHandler = async (event) => {
 const updatePostHandler = async (event) => {
   event.preventDefault();
 
-  const title = document.querySelector("#post-title").value;
-  const content = document.querySelector("#new-post").value;
+  const title = document.querySelector("#edit-title").value;
+  const content = document.querySelector("#edit-post").value;
   const postId = document.querySelector("#post-id").value;
 
   if (title && content) {

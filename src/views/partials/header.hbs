@@ -1,3 +1,7 @@
 <header>
   <h1 class="heading">Tech Blog</h1>
+  {{#if loggedIn}}{{else}}
+    <a href="/sign-up" id="header-sign-up-btn" class="button">Sign Up!</a>
+  {{/if}}
+
 </header>

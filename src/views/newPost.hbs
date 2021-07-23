@@ -1,6 +1,20 @@
-<main>
-  <form class="create-post-form">
-    <div class="article-container new-post">
+<aside>
+  <div class="create-post-submit">
+    <div class="user-options-container">
+      <button
+        type="submit"
+        value="save-&-post"
+        class="button"
+        id="create-post"
+      >Save & Post</button>
+    </div>
+  </div>
+</aside>
+
+<main style="height:79%;">
+  <div class="main-container" style="height:100%;">
+
+    <form class="article-container new-post">
       <label for="post-title"></label>
       <input
         type="text"
@@ -21,23 +35,11 @@
         spellcheck="true"
         minlength="1"
         placeholder="Write your post here"
+        oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
       ></textarea>
-    </div>
-  </form>
+    </form>
 
-</main>
-
-<aside>
-  <div class="create-post-submit">
-    <div class="user-options-container">
-      <button
-        type="submit"
-        value="save-&-post"
-        class="button"
-        id="create-post"
-      >Save & Post</button>
-    </div>
   </div>
-</aside>
+</main>
 
 <script src="/js/postManipulation.js"></script>
