@@ -113,7 +113,6 @@ header {
 .article-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
   background-color: var(--cultured);
   margin: 0.5rem 0.5rem;
@@ -440,15 +439,12 @@ textarea#edit-post {
     resize: none;
   }
 
-  textarea#edit-post {
-  }
-
   /* FOOTER */
-
   .follow-icon {
     max-width: 30px;
   }
 }
+
 @media screen and (min-width: 970px) {
   /* Resizing the Page Heading and signup button */
   .heading {

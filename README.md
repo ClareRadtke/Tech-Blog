@@ -5,6 +5,12 @@ This app folows the MVC paradigm in its architectural structure, uses Handlebars
 
 [Read articles and add your own!](https://tech-blog-wk14-2021.herokuapp.com/)
 
+## Icon Attribution
+
+Icons were sourced from [www.flaticon.com](https://www.flaticon.com/).
+GITHUB icon was made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect).
+LINKEDIN icon was made by [Freepik](https://www.freepik.com).
+
 ## User Story
 
 AS A developer who writes about tech  
@@ -59,6 +65,3 @@ THEN I am able to view comments but I am prompted to log in again before I can a
   - express-session, to add authentication
   - connect-session-sequelize, to add authentication
 - [] Application must be deployed to Heroku
-- []
-- []
-- []

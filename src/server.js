@@ -19,7 +19,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(
   session({
-    secret: "gobldygook", // TODO
+    secret: "gT3TESk4yaV0G9Rm38cZ",
     cookie: {},
     maxAge: 900000,
     rolling: true,

@@ -1,4 +1,4 @@
-//add a post
+// Add post
 const createPostHandler = async (event) => {
   event.preventDefault();
 
@@ -20,7 +20,7 @@ const createPostHandler = async (event) => {
   }
 };
 
-//update a post
+// Update post
 const updatePostHandler = async (event) => {
   event.preventDefault();
 

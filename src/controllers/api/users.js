@@ -1,6 +1,7 @@
 const { User } = require("../../models");
 const router = require("express").Router();
 
+// Create new user
 router.post("/", async (req, res) => {
   const { username, password } = req.body;
   try {
@@ -22,6 +23,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Login route
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
   try {
@@ -54,9 +56,9 @@ router.post("/login", async (req, res) => {
 });
 
 // Update user
-// Future State TODO: add update settings option for password reset
+// Future State TODO: Add update settings option for password reset
 
 // Delete user session
-// Future State TODO: add option to delete account
+// Future State TODO: Add option to delete account
 
 module.exports = router;
