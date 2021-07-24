@@ -43,8 +43,11 @@ app.use((req, res, next) => {
 });
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () =>
-    console.log(`Now listening to server: http://localhost:${PORT}`)
-  );
-});
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    app.listen(PORT, () =>
+      console.log(`Now listening to server: http://localhost:${PORT}`)
+    );
+  })
+  .catch((err) => console.error(err));
