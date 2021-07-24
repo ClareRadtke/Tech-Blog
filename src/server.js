@@ -35,6 +35,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../public/")));
 app.use((req, res, next) => {
+  console.log("incoming req:", req.url);
   res.locals.loggedIn = req.session.logged_in;
   res.locals.userId = req.session.userId;
   res.locals.url = req.url;
