@@ -1,9 +1,10 @@
 # Tech Blog
 
 A CMS-style blog site, where you can publish a blog post and comment on other posts as well.
-This app folows the MVC paradigm in its architectural structure, uses Handlebars.js as teh templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+This app folows the MVC paradigm in its architectural structure, uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 [Read articles and add your own!](https://tech-blog-wk14-2021.herokuapp.com/)
+![Tech Blog functionality demo](./public/images/techBlogDemo.gif)
 
 ## Icon Attribution
 
